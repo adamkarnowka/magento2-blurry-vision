@@ -1,5 +1,5 @@
 {
-  "name": "creativestyle/blurry-vision",
+  "name": "albedo/blurry-vision",
   "description": "Extension to blur sensitive data in admin panel (carts, reports, figures) - useful when screensharing.",
   "type": "magento2-module",
   "license": "GPL-3.0",
