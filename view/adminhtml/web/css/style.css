@@ -1,0 +1,62 @@
+#blurry-vision-modal {
+    display:flex;
+    min-height:280px;
+}
+
+#blurry-vision-modal .description,#blurry-vision-modal .image {
+    flex:1;
+}
+
+.small-blur{
+    filter: blur(1px);
+}
+
+.key {
+    height:68px;
+    overflow:hidden;
+    text-align:right;
+    margin-top:170px;
+}
+
+img.default,img.blurred {
+    position:absolute;
+    border:1px solid #CCC;
+}
+
+.screen {
+    position:relative;
+}
+
+.image .screen img.blurred {
+    animation-duration:3s;
+    animation-name:blurify;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+
+.key img {
+    animation-duration:3s;
+    animation-name:keyPress;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+}
+
+@keyframes keyPress {
+    from {
+        margin-top:0;
+    }
+
+    to {
+        margin-top:8px;
+    }
+}
+
+@keyframes blurify {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+}

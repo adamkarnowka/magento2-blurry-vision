@@ -1,0 +1,5 @@
+<sections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:mftf:Page/etc/SectionObject.xsd">
+    <section name="BlurryVisionAdminConfigSection">
+        <element name="enabledSelector" type="select" selector="#admin_blurry_vision_enabled"/>
+    </section>
+</sections>

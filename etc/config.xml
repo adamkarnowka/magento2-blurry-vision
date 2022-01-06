@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <admin>
+            <blurry_vision>
+                <enabled>1</enabled>
+                <blur_strength>6</blur_strength>
+                <selectors><![CDATA[{"_1640809022440_440":{"label":"Messages Wrapper","selector":".message-system-short-wrapper"},"_1641295056011_11":{"label":"Dashboard figures","selector":".dashboard-sales-value"},"_1641295064324_324":{"label":"Admin name","selector":".admin-user-account-text"},"_1641295081623_623":{"label":"Sales order grid","selector":"body.sales-order-index .data-grid-draggable td"},"_1641295220116_116":{"label":"Sales invoices grid","selector":".sales-invoice-index .data-grid-draggable td"},"_1641295246350_350":{"label":"Sales shipments grid","selector":"body.sales-shipment-index  .data-grid-draggable td"},"_1641295290688_688":{"label":"Sales credit memo grid","selector":"body.sales-creditmemo-index  .data-grid-draggable td"},"_1641295291913_913":{"label":"Sales returns grid","selector":"body.sales-rma-index  .data-grid-draggable td"},"_1641295293830_830":{"label":"Paypal Billing agreements","selector":"body.paypal-billing_agreement-index  .data-grid-draggable td"},"_1641295294906_906":{"label":"Sales transactions grid","selector":"body.sales-transactions-index  .data-grid-draggable td"},"_1641402853486_486":{"label":"Dahboard numbers","selector":".dashboard-totals-value"}}]]></selectors>
+            </blurry_vision>
+        </admin>
+    </default>
+</config>

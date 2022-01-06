@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/testSchema.xsd">
+    <test name="BlurredByDefaultTest">
+        <annotations>
+            <features value="Backend"/>
+            <stories value="Dashboard sensitive values are blurred by deffault."/>
+            <title value="Dashboard sensitive values are blurred by deffault"/>
+            <description value="Admin, when logged in should see sensitive values blurred by default."/>
+            <severity value="CRITICAL"/>
+            <group value="backend"/>
+            <group value="login"/>
+        </annotations>
+
+        <actionGroup ref="AdminLoginActionGroup" stepKey="loginAsAdmin"/>
+        <actionGroup ref="AssertAdminSuccessLoginActionGroup" stepKey="assertLoggedIn"/>
+        <actionGroup ref="AssertFiguresAreBlurredActionGroup" stepKey="AssertFiguresAreBlurred"/>
+
+    </test>
+</tests>

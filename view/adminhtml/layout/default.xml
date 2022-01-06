@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <head>
+        <css src="Albedo_BlurryVision::css/style.css"/>
+        <link src="Albedo_BlurryVision::js/hotkey.js"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="\Albedo\BlurryVision\Block\Adminhtml\Selectors" name="blurry_vision.selectors" template="Albedo_BlurryVision::selectors.phtml" before="-" />
+        </referenceContainer>
+    </body>
+</page>

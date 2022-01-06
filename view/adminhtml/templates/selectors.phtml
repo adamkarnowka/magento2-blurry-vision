@@ -1,0 +1,32 @@
+<?php /* @var $block \Albedo\BlurryVision\Block\Adminhtml\Selectors  */  ?>
+
+<?php if($block->isEnabled()){?>
+    <div id="blurry-vision-modal" style="display: none;">
+        <div class="description">
+            <?=__('Sensitive data will be blurred from now on.');?><br/>
+            <?=__('In order to reveal it, please type letter "B" on your keyboard.');?><br/>
+            <?=__('Type it again, to blur content again.');?>
+            <?=__('This can be disabled in admin panel.');?>
+
+            <div class="key">
+                <img src="<?= $this->getViewFileUrl('Albedo_BlurryVision/images/hotkey.png'); ?>" width="76" height="76" />
+            </div>
+        </div>
+        <div class="image">
+            <div class="screen">
+                <img class="default" src="<?= $this->getViewFileUrl('Albedo_BlurryVision/images/dashboard.png'); ?>" width="400" />
+                <img class="blurred" src="<?= $this->getViewFileUrl('Albedo_BlurryVision/images/dashboard-blurred.png'); ?>" width="400" />
+            </div>
+        </div>
+    </div>
+    <script>
+        var BLURRY_VISION_SELECTORS = '<?php echo $block->getSelectorsJson(); ?>';
+        var BLURRY_VISION_BLUR_STRENGTH = <?php echo $block->getBlurStrength(); ?>;
+    </script>
+    <style>
+        <?php echo $block->getSelectorsCss();?>{
+            animation: filter 1s;
+            filter: blur(<?php echo $block->getBlurStrength(); ?>px);
+        }
+    </style>
+<?php } ?>

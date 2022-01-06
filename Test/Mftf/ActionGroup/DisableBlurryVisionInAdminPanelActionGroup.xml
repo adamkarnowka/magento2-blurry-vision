@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
+    <actionGroup name="DisableBlurryVisionInAdminPanelActionGroup">
+        <annotations>
+            <description>Disable blurry vision in admin panel and refresh config cache.</description>
+        </annotations>
+
+        <amOnPage url="{{AdminConfigAdminPage.url}}" stepKey="amOnTheConfigurationPage1"/>
+        <waitForPageLoad time="30" stepKey="waitForPageLoad1"/>
+        <selectOption selector="{{BlurryVisionAdminConfigSection.enabledSelector}}" userInput="No" stepKey="setAsDisabled"/>
+        <click selector="{{AdminConfigSection.saveButton}}" stepKey="clickSaveConfigBtn"/>
+        <waitForElementVisible selector="{{AdminMessagesSection.success}}" stepKey="waitForSuccessMessage"/>
+    </actionGroup>
+</actionGroups>
+
+

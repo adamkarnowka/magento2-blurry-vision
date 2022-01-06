@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
+    <actionGroup name="RefreshConfigCacheActionGroup">
+        <annotations>
+            <description>Disable blurry vision in admin panel and refresh config cache.</description>
+        </annotations>
+
+        <amOnPage url="{{AdminCacheManagementPage.url}}" stepKey="amOnTheCacheManagementPage1"/>
+        <click selector="{{AdminCacheSection.configCacheCheckbox}}" stepKey="clickSaveConfigBtn"/>
+        <wait time="30" stepKey="waitForBanners"/>
+    </actionGroup>
+</actionGroups>
+
+

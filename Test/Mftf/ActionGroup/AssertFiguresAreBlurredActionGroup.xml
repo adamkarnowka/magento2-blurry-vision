@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
+    <actionGroup name="AssertFiguresAreBlurredActionGroup">
+        <annotations>
+            <description>Checks if CSS for blurring in injected into sourcecode.</description>
+        </annotations>
+
+        <seeInPageSource html="var BLURRY_VISION_BLUR_STRENGTH" stepKey="seeInPageSourceJss"/>
+        <seeInPageSource html="filter&#58; blur&#40;6px&#41;&#59;" stepKey="seeInPageSourceCssProperty"/>
+
+    </actionGroup>
+</actionGroups>
+
+
+
